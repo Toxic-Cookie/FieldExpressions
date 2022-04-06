@@ -16,7 +16,7 @@ namespace FieldExpressions.Core
     {
         public override string Name => "FieldExpressions";
         public override string Author => "Toxic_Cookie";
-        public override string Version => "1.0.0";
+        public override string Version => "1.0.2";
         public override string Link => "https://github.com/Toxic-Cookie/FieldExpressions";
 
         public override void OnEngineInit()
@@ -44,7 +44,7 @@ namespace FieldExpressions.Core
                         {
                             if (structFieldAccessor.TargetType != typeof(string))
                             {
-                                if (PrimitiveTryParsers.GetParser(structFieldAccessor.TargetType)(evaluator.Evaluate(____textEditor.Target.Text.Target.Text + ";").ToString(), out var _parsed))
+                                if (PrimitiveTryParsers.GetParser(structFieldAccessor.TargetType)(evaluator.Evaluate(____textEditor.Target.Text.Target.Text).ToString(), out var _parsed))
                                 {
                                     __instance.SetMemberValue(_parsed);
                                 }
