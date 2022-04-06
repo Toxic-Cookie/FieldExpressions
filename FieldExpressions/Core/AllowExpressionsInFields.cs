@@ -44,7 +44,7 @@ namespace FieldExpressions.Core
                         {
                             if (structFieldAccessor.TargetType != typeof(string))
                             {
-                                if (PrimitiveTryParsers.GetParser(structFieldAccessor.TargetType)(evaluator.ScriptEvaluate(____textEditor.Target.Text.Target.Text + ";").ToString(), out var _parsed))
+                                if (PrimitiveTryParsers.GetParser(structFieldAccessor.TargetType)(evaluator.Evaluate(____textEditor.Target.Text.Target.Text + ";").ToString(), out var _parsed))
                                 {
                                     __instance.SetMemberValue(_parsed);
                                 }
