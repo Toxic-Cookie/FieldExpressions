@@ -1,5 +1,7 @@
 # FieldExpressions
 
+There is currently a RCE exploit due to the lack of sandboxing in codingseb's expression evaluator. Please do not install this mod until I replace the library with one that is properly sandboxed.
+
 A [NeosModLoader](https://github.com/zkxs/NeosModLoader) mod for [Neos VR](https://neos.com/) that allows you to use [CodingSeb's Expression Evaluator](https://github.com/codingseb/ExpressionEvaluator/wiki/Getting-Started) in inspector fields.
 
 ## Installation
