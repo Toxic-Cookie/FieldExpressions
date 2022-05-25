@@ -16,7 +16,7 @@ namespace FieldExpressions.Core
     {
         public override string Name => "FieldExpressions";
         public override string Author => "Toxic_Cookie";
-        public override string Version => "1.0.2";
+        public override string Version => "1.0.3";
         public override string Link => "https://github.com/Toxic-Cookie/FieldExpressions";
 
         public override void OnEngineInit()
@@ -25,6 +25,7 @@ namespace FieldExpressions.Core
             harmony.PatchAll();
 
             evaluator.OptionCaseSensitiveEvaluationActive = false;
+            evaluator.OptionInlineNamespacesEvaluationActive = false;
         }
 
         public static ExpressionEvaluator evaluator = new ExpressionEvaluator();
