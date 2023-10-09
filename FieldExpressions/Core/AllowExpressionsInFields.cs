@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using CodingSeb.ExpressionEvaluator;
 using HarmonyLib;
-using NeosModLoader;
-using BaseX;
+using ResoniteModLoader;
+using Elements.Core;
 using FrooxEngine;
 
 namespace FieldExpressions.Core
 {
-    class FieldExpressions : NeosMod
+    class FieldExpressions : ResoniteMod
     {
         public override string Name => "FieldExpressions";
         public override string Author => "Toxic_Cookie";
-        public override string Version => "1.0.3";
+        public override string Version => "1.0.4";
         public override string Link => "https://github.com/Toxic-Cookie/FieldExpressions";
 
         public override void OnEngineInit()
@@ -25,7 +20,7 @@ namespace FieldExpressions.Core
             harmony.PatchAll();
 
             evaluator.OptionCaseSensitiveEvaluationActive = false;
-            evaluator.OptionInlineNamespacesEvaluationActive = false;
+            evaluator.OptionInlineNamespacesEvaluationRule = InlineNamespacesEvaluationRule.AllowOnlyInlineNamespacesList;
         }
 
         public static ExpressionEvaluator evaluator = new ExpressionEvaluator();
@@ -37,7 +32,7 @@ namespace FieldExpressions.Core
             {
                 try
                 {
-                    StructFieldAccessor structFieldAccessor = __instance.Accessor;
+                    StructMemberAccessor structFieldAccessor = __instance.Accessor;
 
                     if (structFieldAccessor != null)
                     {

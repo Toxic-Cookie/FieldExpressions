@@ -5,22 +5,25 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="start /w /d &quot;C:\Program Files (x86)\Steam\steamapps\common\NeosVR\AutoPostX&quot; AutoPostX.exe &quot;$(TargetDir)$(TargetFileName)&quot;&#xD;&#xA;copy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\NeosVR\nml_mods&quot;" />
+    <Exec Command="copy &quot;$(TargetDir)$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Resonite\rml_mods&quot;" />
   </Target>
 
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\NeosVR\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="BaseX">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\NeosVR\Neos_Data\Managed\BaseX.dll</HintPath>
+    <Reference Include="CodingSeb.ExpressionEvaluator">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\rml_libs\CodingSeb.ExpressionEvaluator.dll</HintPath>
+    </Reference>
+    <Reference Include="Elements.Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Resonite_Data\Managed\Elements.Core.dll</HintPath>
     </Reference>
     <Reference Include="FrooxEngine">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\NeosVR\Neos_Data\Managed\FrooxEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Resonite_Data\Managed\FrooxEngine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NeosModLoader">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\NeosVR\Libraries\NeosModLoader.dll</HintPath>
+    <Reference Include="ResoniteModLoader">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll</HintPath>
     </Reference>
   </ItemGroup>
 
