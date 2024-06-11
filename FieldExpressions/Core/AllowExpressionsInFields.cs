@@ -20,7 +20,6 @@ namespace FieldExpressions.Core
             Harmony harmony = new Harmony("net.Toxic_Cookie.FieldExpressions");
             harmony.PatchAll();
 
-            evaluator.CultureInfoForNumberParsing = CultureInfo.InvariantCulture;
             evaluator.OptionCaseSensitiveEvaluationActive = false;
             evaluator.OptionInlineNamespacesEvaluationRule = InlineNamespacesEvaluationRule.AllowOnlyInlineNamespacesList;
         }
