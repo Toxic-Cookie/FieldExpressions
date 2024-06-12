@@ -20,14 +20,13 @@ namespace FieldExpressions.Core
             Harmony harmony = new Harmony("net.Toxic_Cookie.FieldExpressions");
             harmony.PatchAll();
 
-            evaluator.CultureInfoForNumberParsing = CultureInfo.InvariantCulture;
             evaluator.OptionCaseSensitiveEvaluationActive = false;
             evaluator.OptionInlineNamespacesEvaluationRule = InlineNamespacesEvaluationRule.AllowOnlyInlineNamespacesList;
         }
 
         public static ExpressionEvaluator evaluator = new ExpressionEvaluator();
 
-        [HarmonyPatch(typeof(PrimitiveMemberEditor), "ParseAndAssign")]
+        [HarmonyPatch(typeof(PrimitiveMemberEditor), "ParseAndAssign", argumentTypes: new Type[] { })]
         class AllowExpressionsInFields
         {
             static bool Prefix(PrimitiveMemberEditor __instance, ref SyncRef<TextEditor> ____textEditor, ref FieldDrive<string> ____textDrive)
