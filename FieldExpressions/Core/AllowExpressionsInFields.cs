@@ -12,7 +12,7 @@ namespace FieldExpressions.Core
     {
         public override string Name => "FieldExpressions";
         public override string Author => "Toxic_Cookie";
-        public override string Version => "1.0.4";
+        public override string Version => "1.0.5";
         public override string Link => "https://github.com/Toxic-Cookie/FieldExpressions";
 
         public override void OnEngineInit()
